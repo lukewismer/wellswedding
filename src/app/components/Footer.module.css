@@ -1,0 +1,126 @@
+.footer {
+    background-color: var(--brunswick-green);
+    color: var(--timberwolf);
+    padding: 3rem 0 1rem;
+    margin-top: auto;
+  }
+  
+  .footerContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footerSection {
+    text-align: center;
+  }
+  
+  .footerTitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: var(--sage);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .footerSubtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--sage);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .footerText {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    color: var(--timberwolf);
+  }
+  
+  .contactInfo {
+    text-align: left;
+  }
+  
+  .footerLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .footerLink {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--timberwolf);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.25rem 0;
+  }
+  
+  .footerLink:hover {
+    color: var(--sage);
+    text-decoration: underline;
+  }
+  
+  .footerBottom {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(163, 177, 138, 0.3);
+  }
+  
+  .copyright {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--sage);
+    margin: 0;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 2rem 0 1rem;
+    }
+  
+    .footerContainer {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      text-align: center;
+    }
+  
+    .contactInfo {
+      text-align: center;
+    }
+  
+    .footerLinks {
+      align-items: center;
+    }
+  
+    .footerTitle {
+      font-size: 2rem;
+    }
+  
+    .footerSubtitle {
+      font-size: 1.2rem;
+    }
+  
+    .footerText {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 1.5rem 0 1rem;
+    }
+  
+    .footerTitle {
+      font-size: 1.8rem;
+    }
+  
+    .footerSubtitle {
+      font-size: 1.1rem;
+    }
+  }

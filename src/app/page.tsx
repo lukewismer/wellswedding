@@ -1,95 +1,134 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Image from 'next/image'
+import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <main>
+      {/* Hero Section */}
+      <section className={`section ${styles.hero}`}>
+        <div className={styles.heroOverlay}></div>
+        <div className={`container ${styles.heroContent}`}>
+          <h1 className={styles.heroTitle}>
+            Jeremy & Kara
+          </h1>
+          <p className={styles.heroSubtitle}>
+            July 25, 2026
+          </p>
+          <p className={styles.heroText}>
+            Join us as we begin our forever together
+          </p>
+          <div className={styles.btnContainer}>
+            <a href="#invitation" className="btn">
+              View Invitation
+            </a>
+            <a href="/rsvp" className="btn btn-secondary">
+              RSVP Now
+            </a>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </section>
+
+      {/* Invitation Card Section */}
+      <section id="invitation" className={`section ${styles.invitation}`}>
+        <div className="container">
+          <h2 className={styles.invitationTitle}>
+            You&apos;re Invited
+          </h2>
+          <div className={styles.invitationImage}>
+            <Image 
+              src="/images/invite-card.png"
+              alt="Wedding Invitation"
+              width={500}
+              height={700}
+              style={{
+                width: '100%',
+                height: 'auto',
+                display: 'block'
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* The Day Section */}
+      <section className={`section ${styles.theDay}`}>
+        <div className="container">
+          <h2 className={styles.theDayTitle}>
+            The Day
+          </h2>
+          <div className={styles.eventGrid}>
+            {/* Reception */}
+            <div className={styles.eventCard}>
+              <div className={styles.eventIcon}>
+                <Image 
+                  src="/icons/hall.png"
+                  alt="Reception"
+                  width={40}
+                  height={40}
+                />
+              </div>
+              <h3 className={styles.eventTitle}>
+                Reception
+              </h3>
+              <p className={styles.eventTime}>
+                4:00 PM
+              </p>
+              <p className={styles.eventLocation}>
+                American Creek Lodge
+              </p>
+            </div>
+
+            {/* Dinner */}
+            <div className={styles.eventCard}>
+              <div className={styles.eventIcon}>
+                <Image 
+                  src="/icons/food.png"
+                  alt="Dinner"
+                  width={40}
+                  height={40}
+                />
+              </div>
+              <h3 className={styles.eventTitle}>
+                Dinner
+              </h3>
+              <p className={styles.eventTime}>
+                6:00 PM
+              </p>
+              <p className={styles.eventLocation}>
+                American Creek Lodge
+              </p>
+            </div>
+
+            {/* Dance */}
+            <div className={styles.eventCard}>
+              <div className={styles.eventIcon}>
+                <Image 
+                  src="/icons/dance.png"
+                  alt="Dance"
+                  width={40}
+                  height={40}
+                />
+              </div>
+              <h3 className={styles.eventTitle}>
+                Dance
+              </h3>
+              <p className={styles.eventTime}>
+                8:00 PM
+              </p>
+              <p className={styles.eventLocation}>
+                American Creek Lodge
+              </p>
+            </div>
+          </div>
+          
+          {/* Additional Info */}
+          <div className={styles.additionalInfo}>
+            <p className={styles.additionalInfoText}>
+              All events will be held at the beautiful American Creek Lodge
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
 }

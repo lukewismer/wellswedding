@@ -1,0 +1,177 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--sage);
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+  }
+  
+  .navbarBrand {
+    flex-shrink: 0;
+  }
+  
+  .brandLink {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--hunter-green);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .brandLink:hover {
+    color: var(--fern-green);
+  }
+  
+  .menuButton {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+  }
+  
+  .menuIcon {
+    width: 25px;
+    height: 2px;
+    background-color: var(--hunter-green);
+    margin: 3px 0;
+    transition: 0.3s;
+    transform-origin: center;
+  }
+  
+  .navbarMenu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbarNav {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navLink {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--brunswick-green);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .navLink:hover {
+    color: var(--fern-green);
+    background-color: rgba(163, 177, 138, 0.1);
+  }
+  
+  .navLink::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--fern-green);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .navLink:hover::after {
+    width: 80%;
+  }
+  
+  .overlay {
+    display: none;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .menuButton {
+      display: flex;
+    }
+  
+    .navbarMenu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: 100vh;
+      background-color: white;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      transition: right 0.3s ease;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 5rem;
+    }
+  
+    .navbarMenuOpen {
+      right: 0;
+    }
+  
+    .navbarNav {
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+    }
+  
+    .navLink {
+      display: block;
+      padding: 1rem 2rem;
+      border-radius: 0;
+      border-bottom: 1px solid var(--timberwolf);
+      font-size: 1.3rem;
+    }
+  
+    .navLink::after {
+      display: none;
+    }
+  
+    .navLink:hover {
+      background-color: var(--sage);
+      color: white;
+    }
+  
+    .overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+  
+    /* Animate hamburger to X when open */
+    .navbarMenuOpen + .menuButton .menuIcon:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+  
+    .navbarMenuOpen + .menuButton .menuIcon:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .navbarMenuOpen + .menuButton .menuIcon:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }

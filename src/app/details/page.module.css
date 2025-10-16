@@ -1,0 +1,433 @@
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(163, 177, 138, 0.9) 0%, rgba(88, 129, 87, 0.8) 100%), 
+                url('/images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+  }
+  
+  .heroContent {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .heroTitle {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .heroSubtitle {
+    font-size: 1.5rem;
+    color: white;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Section Title */
+  .sectionTitle {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--brunswick-green);
+    position: relative;
+  }
+  
+  .sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sage), var(--fern-green));
+    border-radius: 2px;
+  }
+  
+  /* Itinerary Section */
+  .itinerary {
+    background-color: var(--timberwolf);
+    padding: 100px 0;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--sage), var(--fern-green));
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  .timelineItem {
+    position: relative;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .timelineItem:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  
+  .timelineContent {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 4rem);
+    transition: transform 0.3s ease;
+  }
+  
+  .timelineContent:hover {
+    transform: translateY(-5px);
+  }
+  
+  .timelineItem:nth-child(odd) .timelineContent {
+    text-align: right;
+  }
+  
+  .timelineTime {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--fern-green);
+    margin-bottom: 0.5rem;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .timelineTitle {
+    font-size: 1.8rem;
+    color: var(--hunter-green);
+    margin-bottom: 1rem;
+  }
+  
+  .timelineDescription {
+    color: var(--brunswick-green);
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  
+  .timelineDot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--fern-green);
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--sage);
+    z-index: 2;
+  }
+  
+  /* Gifts Section */
+  .gifts {
+    background-color: var(--sage);
+    padding: 100px 0;
+  }
+  
+  .giftsContent {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .giftsDescription {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--brunswick-green);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .registryList {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .registryItem {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .registryItem:hover {
+    transform: translateY(-5px);
+  }
+  
+  .registryTitle {
+    font-size: 1.5rem;
+    color: var(--hunter-green);
+    margin-bottom: 1rem;
+  }
+  
+  .registryDescription {
+    color: var(--brunswick-green);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .registryLink {
+    background-color: var(--fern-green);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .registryLink:hover {
+    background-color: var(--hunter-green);
+    transform: translateY(-2px);
+  }
+  
+  .giftsImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .engagementImage {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+  }
+  
+  /* Accommodations Section */
+  .accommodations {
+    background-color: var(--timberwolf);
+    padding: 100px 0;
+  }
+  
+  .accommodationsIntro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--brunswick-green);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  
+  .hotelsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .hotelCard {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .hotelCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .hotelImage {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .hotelImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .hotelCard:hover .hotelImg {
+    transform: scale(1.05);
+  }
+  
+  .hotelInfo {
+    padding: 1.5rem;
+  }
+  
+  .hotelName {
+    font-size: 1.5rem;
+    color: var(--hunter-green);
+    margin-bottom: 0.5rem;
+  }
+  
+  .hotelDistance {
+    color: var(--fern-green);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  .hotelDescription {
+    color: var(--brunswick-green);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .hotelDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--timberwolf);
+  }
+  
+  .hotelPrice {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--fern-green);
+  }
+  
+  .hotelContact {
+    color: var(--brunswick-green);
+    font-size: 0.9rem;
+  }
+  
+  .hotelLink {
+    background-color: var(--fern-green);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .hotelLink:hover {
+    background-color: var(--hunter-green);
+    transform: translateY(-2px);
+  }
+  
+  .transportation {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .transportationTitle {
+    font-size: 1.8rem;
+    color: var(--hunter-green);
+    margin-bottom: 1rem;
+  }
+  
+  .transportationText {
+    color: var(--brunswick-green);
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .heroTitle {
+      font-size: 2.8rem;
+    }
+  
+    .sectionTitle {
+      font-size: 2.5rem;
+    }
+  
+    .timeline::before {
+      left: 30px;
+    }
+  
+    .timelineItem {
+      flex-direction: row !important;
+      margin-bottom: 2rem;
+    }
+  
+    .timelineContent {
+      width: calc(100% - 80px);
+      margin-left: 80px;
+      text-align: left !important;
+    }
+  
+    .timelineDot {
+      left: 30px;
+    }
+  
+    .giftsContent {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .giftsImage {
+      order: -1;
+    }
+  
+    .engagementImage {
+      max-width: 300px;
+    }
+  
+    .hotelsGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .hotelDetails {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heroTitle {
+      font-size: 2.2rem;
+    }
+  
+    .sectionTitle {
+      font-size: 2rem;
+    }
+  
+    .timelineContent {
+      padding: 1.5rem;
+      margin-left: 60px;
+      width: calc(100% - 60px);
+    }
+  
+    .timelineDot {
+      left: 20px;
+    }
+  
+    .registryItem {
+      padding: 1.5rem;
+    }
+  
+    .hotelInfo {
+      padding: 1rem;
+    }
+  }
