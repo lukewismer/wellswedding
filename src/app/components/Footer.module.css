@@ -1,126 +1,279 @@
+/* Footer */
 .footer {
-    background-color: var(--brunswick-green);
-    color: var(--timberwolf);
-    padding: 3rem 0 1rem;
-    margin-top: auto;
+  background-image: url('/images/footer.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  margin-top: auto;
+}
+
+.backgroundOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg, 
+    rgba(52, 78, 65, 0.85) 0%, 
+    rgba(58, 90, 64, 0.8) 50%, 
+    rgba(34, 51, 40, 0.9) 100%
+  );
+}
+
+/* Countdown Section */
+.countdownSection {
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.countdownTitle {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.countdownContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.countdownItem {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.countdownItem:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.countdownNumber {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.countdownLabel {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: var(--timberwolf);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* Footer Content */
+.footerContainer {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 0 1rem;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footerSection {
+  text-align: center;
+}
+
+.footerTitle {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.footerSubtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  color: var(--sage);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.footerText {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: var(--timberwolf);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.footerText strong {
+  color: white;
+}
+
+.contactInfo {
+  text-align: center;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footerLink {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--timberwolf);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.25rem 0;
+}
+
+.footerLink:hover {
+  color: var(--sage);
+  text-decoration: underline;
+}
+
+.footerBottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.copyright {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: var(--sage);
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .countdownSection {
+    padding: 2rem 0;
   }
-  
+
+  .countdownTitle {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .countdownContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 400px;
+  }
+
+  .countdownItem {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .countdownNumber {
+    font-size: 2rem;
+  }
+
+  .countdownLabel {
+    font-size: 0.9rem;
+  }
+
   .footerContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 2rem 0 1rem;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr;
     gap: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .footerSection {
     text-align: center;
   }
-  
-  .footerTitle {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.2rem;
-    color: var(--sage);
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-  
-  .footerSubtitle {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    color: var(--sage);
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-  
-  .footerText {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
-    color: var(--timberwolf);
-  }
-  
+
   .contactInfo {
-    text-align: left;
-  }
-  
-  .footerLinks {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .footerLink {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    color: var(--timberwolf);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    padding: 0.25rem 0;
-  }
-  
-  .footerLink:hover {
-    color: var(--sage);
-    text-decoration: underline;
-  }
-  
-  .footerBottom {
-    grid-column: 1 / -1;
     text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(163, 177, 138, 0.3);
   }
-  
-  .copyright {
-    font-family: 'Cormorant Garamond', serif;
+
+  .footerLinks {
+    align-items: center;
+  }
+
+  .footerTitle {
+    font-size: 2rem;
+  }
+
+  .footerSubtitle {
+    font-size: 1.2rem;
+  }
+
+  .footerText {
     font-size: 1rem;
-    color: var(--sage);
-    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdownTitle {
+    font-size: 1.8rem;
+  }
+
+  .countdownContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .countdownItem {
+    padding: 1rem 0.5rem;
+  }
+
+  .countdownNumber {
+    font-size: 1.8rem;
+  }
+
+  .countdownLabel {
+    font-size: 0.8rem;
+  }
+
+  .footerContainer {
+    padding: 1.5rem 0 1rem;
+  }
+
+  .footerTitle {
+    font-size: 1.8rem;
+  }
+
+  .footerSubtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .countdownItem:hover {
+    transform: none;
   }
   
-  /* Mobile Styles */
-  @media (max-width: 768px) {
-    .footer {
-      padding: 2rem 0 1rem;
-    }
-  
-    .footerContainer {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      text-align: center;
-    }
-  
-    .contactInfo {
-      text-align: center;
-    }
-  
-    .footerLinks {
-      align-items: center;
-    }
-  
-    .footerTitle {
-      font-size: 2rem;
-    }
-  
-    .footerSubtitle {
-      font-size: 1.2rem;
-    }
-  
-    .footerText {
-      font-size: 1rem;
-    }
+  .countdownItem {
+    transition: none;
   }
-  
-  @media (max-width: 480px) {
-    .footer {
-      padding: 1.5rem 0 1rem;
-    }
-  
-    .footerTitle {
-      font-size: 1.8rem;
-    }
-  
-    .footerSubtitle {
-      font-size: 1.1rem;
-    }
-  }
+}

@@ -1,239 +1,822 @@
-/* Hero Section */
-.hero {
-  background-image: url('/images/background.png');
+/* Details Section */
+.detailsSection {
+  background: linear-gradient(135deg, rgba(163, 177, 138, 0.9) 0%, rgba(88, 129, 87, 0.8) 100%), 
+              url('/images/background.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  position: relative;
-  min-height: 100vh;
+  text-align: center;
+  color: white;
 }
 
-.heroOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(218, 215, 205, 0.7);
-}
-
-.heroContent {
+.detailsSection .container {
   position: relative;
   z-index: 1;
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
-.heroTitle {
-  font-size: 4.5rem;
+.sectionTitle {
+  font-size: 3.5rem;
+  text-align: center;
   margin-bottom: 1rem;
   color: var(--brunswick-green);
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
-  line-height: 1.2;
+  position: relative;
 }
 
-.heroSubtitle {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  color: var(--hunter-green);
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sage), var(--fern-green));
+  border-radius: 2px;
+}
+
+.detailsSection .sectionTitle {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.detailsSection .sectionTitle::after {
+  background: linear-gradient(90deg, white, var(--timberwolf));
+}
+
+.sectionSubtitle {
+  font-size: 1.5rem;
+  color: white;
   font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.heroText {
+/* Itinerary Section */
+.itinerary {
+  background-color: var(--timberwolf);
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--sage), var(--fern-green));
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.timelineItem:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.timelineContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 4rem);
+  transition: transform 0.3s ease;
+}
+
+.timelineContent:hover {
+  transform: translateY(-5px);
+}
+
+.timelineItem:nth-child(odd) .timelineContent {
+  text-align: right;
+}
+
+.timelineTime {
   font-size: 1.3rem;
-  margin-bottom: 3rem;
+  font-weight: 600;
+  color: var(--fern-green);
+  margin-bottom: 0.5rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.timelineTitle {
+  font-size: 1.8rem;
+  color: var(--hunter-green);
+  margin-bottom: 1rem;
+}
+
+.timelineDescription {
   color: var(--brunswick-green);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.timelineDot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--fern-green);
+  border: 4px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--sage);
+  z-index: 2;
+}
+
+/* Gifts Section */
+.gifts {
+  background-color: var(--sage);
+}
+
+.giftsContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.giftsDescription {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--brunswick-green);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.registryList {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.registryItem {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.registryItem:hover {
+  transform: translateY(-5px);
+}
+
+.registryTitle {
+  font-size: 1.5rem;
+  color: var(--hunter-green);
+  margin-bottom: 1rem;
+}
+
+.registryDescription {
+  color: var(--brunswick-green);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.registryLink {
+  background-color: var(--fern-green);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.registryLink:hover {
+  background-color: var(--hunter-green);
+  transform: translateY(-2px);
+}
+
+.giftsImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.engagementImage {
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+/* Accommodations Section */
+.accommodations {
+  background-color: var(--timberwolf);
+}
+
+.accommodationsIntro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--brunswick-green);
+  margin-bottom: 3rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
 }
 
-.btnContainer {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* Invitation Section */
-.invitation {
-  background-color: var(--sage);
-}
-
-.invitationTitle {
-  font-size: 3rem;
+.hotelsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
   margin-bottom: 3rem;
-  color: var(--brunswick-green);
-  text-align: center;
 }
 
-.invitationImage {
-  max-width: 500px;
-  margin: 0 auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+.hotelCard {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.hotelCard:hover {
+  transform: translateY(-5px);
+}
+
+.hotelImage {
+  height: 200px;
   overflow: hidden;
 }
 
-/* The Day Section */
-.theDay {
-  background-color: var(--timberwolf);
+.hotelImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.theDayTitle {
-  font-size: 3rem;
-  margin-bottom: 3rem;
-  color: var(--brunswick-green);
-  text-align: center;
+.hotelCard:hover .hotelImg {
+  transform: scale(1.05);
 }
 
-.eventGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+.hotelInfo {
+  padding: 1.5rem;
 }
 
-.eventCard {
-  padding: 2.5rem 2rem;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.eventCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-.eventIcon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.5rem;
-  border-radius: 50%;
-  background-color: var(--sage);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.eventIcon img {
-  filter: brightness(0) saturate(100%) invert(25%) sepia(15%) saturate(800%) hue-rotate(80deg) brightness(90%) contrast(85%);
-}
-
-.eventTitle {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+.hotelName {
+  font-size: 1.5rem;
   color: var(--hunter-green);
+  margin-bottom: 0.5rem;
 }
 
-.eventTime {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+.hotelDistance {
+  color: var(--fern-green);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.hotelDescription {
+  color: var(--brunswick-green);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.hotelDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--timberwolf);
+}
+
+.hotelPrice {
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--fern-green);
 }
 
-.eventLocation {
+.hotelContact {
   color: var(--brunswick-green);
-  font-style: italic;
+  font-size: 0.9rem;
 }
 
-.additionalInfo {
-  margin-top: 3rem;
-  padding: 2rem;
-  background-color: var(--sage);
-  border-radius: 10px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+.hotelLink {
+  background-color: var(--fern-green);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  width: 100%;
   text-align: center;
 }
 
-.additionalInfoText {
-  font-size: 1.2rem;
-  color: var(--brunswick-green);
-  font-style: italic;
-  margin-bottom: 0;
-  line-height: 1.5;
+.hotelLink:hover {
+  background-color: var(--hunter-green);
+  transform: translateY(-2px);
 }
 
-/* Mobile Responsiveness for Page Components */
+.transportation {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.transportationTitle {
+  font-size: 1.8rem;
+  color: var(--hunter-green);
+  margin-bottom: 1rem;
+}
+
+.transportationText {
+  color: var(--brunswick-green);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* RSVP Form Section */
+.rsvpForm {
+  background: linear-gradient(135deg, rgba(58, 90, 64, 0.9) 0%, rgba(52, 78, 65, 0.8) 100%), 
+              url('/images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.formContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.formTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--hunter-green);
+}
+
+.rsvpForm .heroSubtitle {
+  font-size: 1.5rem;
+  color: var(--brunswick-green);
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Guest Selection */
+.guestSelection {
+  margin-bottom: 2rem;
+}
+
+.searchContainer {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 2px solid var(--sage);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-family: 'Cormorant Garamond', serif;
+  transition: all 0.3s ease;
+  background-color: var(--timberwolf);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--fern-green);
+  box-shadow: 0 0 0 3px rgba(88, 129, 87, 0.1);
+}
+
+.searchResults {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid var(--sage);
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.searchResult {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--timberwolf);
+  transition: background-color 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchResult:hover {
+  background-color: var(--timberwolf);
+}
+
+.searchResult:last-child {
+  border-bottom: none;
+}
+
+.plusOneBadge {
+  background-color: var(--fern-green);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Selected Guests */
+.selectedGuests {
+  margin-top: 1.5rem;
+}
+
+.selectedTitle {
+  font-size: 1.2rem;
+  color: var(--brunswick-green);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.guestList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.guestTag {
+  display: flex;
+  align-items: center;
+  background-color: var(--sage);
+  color: var(--brunswick-green);
+  padding: 0.7rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+
+.plusOneTag {
+  background-color: var(--fern-green);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  color: var(--brunswick-green);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.removeButton:hover {
+  background-color: rgba(52, 78, 65, 0.1);
+}
+
+/* Form Styles */
+.form {
+  margin-top: 2rem;
+}
+
+.formSection {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--timberwolf);
+}
+
+.formSection:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Radio and Checkbox Styles */
+.attendanceOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.radioLabel,
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  border: 2px solid var(--timberwolf);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.radioLabel:hover,
+.checkboxLabel:hover {
+  border-color: var(--sage);
+  background-color: rgba(163, 177, 138, 0.05);
+}
+
+.radioInput,
+.checkboxInput {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radioCustom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--sage);
+  border-radius: 50%;
+  margin-right: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.radioInput:checked + .radioCustom {
+  border-color: var(--fern-green);
+  background-color: var(--fern-green);
+}
+
+.radioInput:checked + .radioCustom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+}
+
+.checkboxCustom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--sage);
+  border-radius: 4px;
+  margin-right: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.checkboxInput:checked + .checkboxCustom {
+  border-color: var(--fern-green);
+  background-color: var(--fern-green);
+}
+
+.checkboxInput:checked + .checkboxCustom::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.radioText,
+.checkboxText {
+  font-size: 1.1rem;
+  color: var(--brunswick-green);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+/* Textarea */
+.textarea {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 2px solid var(--sage);
+  border-radius: 15px;
+  font-size: 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  resize: vertical;
+  min-height: 100px;
+  transition: all 0.3s ease;
+  background-color: var(--timberwolf);
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--fern-green);
+  box-shadow: 0 0 0 3px rgba(88, 129, 87, 0.1);
+}
+
+/* Submit Button */
+.submitButton {
+  width: 100%;
+  padding: 1.2rem 2rem;
+  font-size: 1.2rem;
+  background-color: var(--fern-green);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+}
+
+.submitButton:hover:not(.submitButtonDisabled) {
+  background-color: var(--hunter-green);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(88, 129, 87, 0.3);
+}
+
+.submitButtonDisabled {
+  background-color: var(--timberwolf);
+  color: var(--sage);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Messages */
+.message {
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.messageSuccess {
+  background-color: rgba(88, 129, 87, 0.1);
+  color: var(--fern-green);
+  border: 1px solid var(--fern-green);
+}
+
+.messageError {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+}
+
+/* Additional Info */
+.additionalInfo {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--timberwolf);
+  text-align: center;
+}
+
+.infoTitle {
+  font-size: 1.3rem;
+  color: var(--hunter-green);
+  margin-bottom: 1rem;
+}
+
+.infoText {
+  color: var(--brunswick-green);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.infoLink {
+  color: var(--fern-green);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.infoLink:hover {
+  color: var(--hunter-green);
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness for new sections */
 @media (max-width: 768px) {
-  .heroTitle {
-    font-size: 2.8rem;
-  }
-  
-  .heroSubtitle {
-    font-size: 1.4rem;
-  }
-  
-  .heroText {
-    font-size: 1.1rem;
-    padding: 0 10px;
-  }
-  
-  .btnContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .btnContainer .btn {
-    width: 100%;
-    max-width: 250px;
-    margin-bottom: 1rem;
-  }
-  
-  .eventGrid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .eventCard {
-    padding: 2rem 1.5rem;
-  }
-  
-  .eventIcon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1rem;
-  }
-  
-  .eventIcon img {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .invitationImage {
-    max-width: 90%;
-  }
-  
-  .invitationTitle,
-  .theDayTitle {
+  .sectionTitle {
     font-size: 2.5rem;
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timelineItem {
+    flex-direction: row !important;
+    margin-bottom: 2rem;
+  }
+
+  .timelineContent {
+    width: calc(100% - 80px);
+    margin-left: 80px;
+    text-align: left !important;
+  }
+
+  .timelineDot {
+    left: 30px;
+  }
+
+  .giftsContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .giftsImage {
+    order: -1;
+  }
+
+  .engagementImage {
+    max-width: 300px;
+  }
+
+  .hotelsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hotelDetails {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .formContainer {
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
+  }
+
+  .formTitle {
+    font-size: 2rem;
+  }
+
+  .guestTag {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .radioLabel,
+  .checkboxLabel {
+    padding: 0.8rem;
+  }
+
+  .radioText,
+  .checkboxText {
+    font-size: 1rem;
+  }
+
+  .submitButton {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .heroTitle {
-    font-size: 2.2rem;
+  .sectionTitle {
+    font-size: 2rem;
   }
-  
-  .heroSubtitle {
-    font-size: 1.2rem;
+
+  .formContainer {
+    padding: 1.5rem 1rem;
   }
-  
-  .invitationTitle,
-  .theDayTitle {
-    font-size: 2.2rem;
-  }
-  
-  .eventTitle {
+
+  .formTitle {
     font-size: 1.8rem;
+  }
+
+  .guestList {
+    gap: 0.5rem;
+  }
+
+  .guestTag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
   }
 }

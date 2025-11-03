@@ -35,15 +35,9 @@ export default function Navbar() {
         {/* Navigation Links */}
         <div className={`${styles.navbarMenu} ${isOpen ? styles.navbarMenuOpen : ''}`}>
           <div className={styles.navbarNav}>
-            <Link href="/" className={styles.navLink} onClick={() => setIsOpen(false)}>
-              Home
-            </Link>
-            <Link href="/details" className={styles.navLink} onClick={() => setIsOpen(false)}>
-              Details
-            </Link>
-            <Link href="/rsvp" className={styles.navLink} onClick={() => setIsOpen(false)}>
-              RSVP
-            </Link>
+            <p className={styles.navLink} onClick={() => setIsOpen(false)}>
+              Scroll down for details
+            </p>
           </div>
         </div>
 
