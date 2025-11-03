@@ -14,7 +14,7 @@ export default function GettingHere() {
               {/* Top Photo */}
               <div className={styles.photoContainer}>
                 <Image 
-                  src="/images/couple-transportation-1.PNG"
+                  src="/images/couple-transportation-1.png"
                   alt="Jeremy and Kara"
                   width={400}
                   height={300}
