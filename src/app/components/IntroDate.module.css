@@ -1,0 +1,133 @@
+.introDate {
+  background-color: #fefbf6; /* Creamier background */
+  padding: 4rem 0;
+}
+
+.introContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Image Column Styles */
+.imageColumn {
+  display: flex;
+  justify-content: center;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.outerBorder {
+  position: relative;
+  border: 4px solid var(--brunswick-green); /* Thicker border */
+  padding: 1.5rem; /* Reduced from 3rem to bring border closer */
+  background-color: #fefbf6; /* Match cream background */
+}
+
+.innerBorder {
+  position: relative;
+  border: 4px solid var(--brunswick-green); /* Thicker border */
+  padding: 1rem; /* Adjusted to maintain proportion */
+  background-color: #fefbf6; /* Match cream background */
+}
+
+.introImage {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  border: 2px solid #f0f0f0; /* Slightly thicker image border */
+}
+
+/* Text Column Styles */
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--brunswick-green);
+  text-align: center; /* Center aligned text */
+}
+
+.dateText {
+  font-family: 'Adora Bella', cursive;
+  font-style: italic;
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.atText {
+  font-family: 'Adora Bella', cursive;
+  font-style: italic;
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.venueText {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .introContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .outerBorder {
+    padding: 1.25rem; /* Adjusted for mobile */
+  }
+  
+  .innerBorder {
+    padding: 0.75rem; /* Adjusted for mobile */
+  }
+  
+  .dateText {
+    font-size: 3rem;
+  }
+  
+  .atText {
+    font-size: 2rem;
+  }
+  
+  .venueText {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .introDate {
+    padding: 2rem 0;
+  }
+  
+  .outerBorder {
+    padding: 1rem;
+  }
+  
+  .innerBorder {
+    padding: 0.5rem;
+  }
+  
+  .dateText {
+    font-size: 2.5rem;
+  }
+  
+  .atText {
+    font-size: 1.8rem;
+  }
+  
+  .venueText {
+    font-size: 1.5rem;
+  }
+}

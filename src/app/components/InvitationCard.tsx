@@ -24,9 +24,6 @@ export default function InvitationCard() {
                 />
               </div>
             </div>
-            <div className={styles.cardLabel}>
-              <span>Front</span>
-            </div>
           </div>
 
           {/* Back of the card */}
@@ -42,21 +39,6 @@ export default function InvitationCard() {
                 />
               </div>
             </div>
-            <div className={styles.cardLabel}>
-              <span>Back</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Important Note Section */}
-        <div className={styles.importantNote}>
-          <div className={styles.noteContent}>
-            <h3 className={styles.noteTitle}>Important Note</h3>
-            <p className={styles.noteText}>
-              Please note that due to limited space, we are only able to accommodate those named on the invitation envelope. 
-              Our wedding will be an adults-only event, as the venue is not well suited for children. 
-              We truly appreciate your understanding.
-            </p>
           </div>
         </div>
       </div>

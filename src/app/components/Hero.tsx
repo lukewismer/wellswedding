@@ -5,25 +5,14 @@ export default function Hero() {
     <section className={`section ${styles.hero}`}>
       <div className={styles.heroOverlay}></div>
       <div className={`container ${styles.heroContent}`}>
-        <h1 className={styles.heroTitle}>
-          Jeremy & Kara
-        </h1>
-        <p className={styles.heroSubtitle}>
-          July 25, 2026
-        </p>
-        <p className={styles.heroText}>
-          Join us as we begin our forever together
-        </p>
-        
-        {/* Chevron animation */}
-        <div className={styles.chevronContainer}>
-          <a href="#" className={styles.chevronLink}>
-            <div className={styles.chevron}></div>
-            <div className={styles.chevron}></div>
-            <div className={styles.chevron}></div>
-            <span className={styles.chevronText}>Scroll for details & RSVP</span>
-          </a>
+        <div className={styles.namesContainer}>
+          <span className={styles.name}>KARA</span>
+          <span className={styles.andSymbol}><i>and</i></span>
+          <span className={styles.name}>JEREMY</span>
         </div>
+        <p className={styles.gettingMarried}>
+          ARE GETTING MARRIED
+        </p>
       </div>
     </section>
   );

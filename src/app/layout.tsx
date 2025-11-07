@@ -1,6 +1,5 @@
 // src/app/layout.tsx
 import './globals.css';
-import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import type { Metadata } from 'next';
 import React from 'react';
@@ -16,7 +15,6 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
         <main style={{ minHeight: '100vh' }}>{children}</main>
         <Footer />
       </body>

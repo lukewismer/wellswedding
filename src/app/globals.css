@@ -20,7 +20,6 @@ body {
   background-color: var(--timberwolf);
   color: var(--brunswick-green);
   line-height: 1.6;
-  padding-top: 80px; /* Add padding for fixed navbar */
 }
 
 h1, h2, h3, h4, h5, h6 {

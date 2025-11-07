@@ -17,15 +17,16 @@
   right: 0;
   bottom: 0;
   background-color: rgba(218, 215, 205, 0.85);
+  z-index: 1;
 }
 
 .rsvpContainer {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 800px;
   margin: 0 auto;
   background: white;
-  border-radius: 25px;
+  border-radius: 0; /* Changed from 25px to 0 */
   padding: 3rem;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border: 2px solid var(--sage);
@@ -40,20 +41,15 @@
 }
 
 .title {
+  font-family: 'Cormorant Garamond', serif; /* Added */
+  font-weight: 600;
   font-size: 3.5rem;
   margin-bottom: 1rem;
   color: var(--hunter-green);
-  font-weight: 600;
-}
-
-.subtitle {
-  font-size: 1.4rem;
-  color: var(--fern-green);
-  margin-bottom: 0.5rem;
-  font-style: italic;
 }
 
 .welcomeMessage {
+  font-family: 'Cormorant Garamond', serif; /* Added */
   font-size: 1.3rem;
   color: var(--brunswick-green);
   margin: 0;
@@ -69,6 +65,8 @@
 }
 
 .sectionTitle {
+  font-family: 'Adora Bella', cursive; /* Changed to Adora Bella */
+  font-style: italic; /* Added italic */
   font-size: 1.8rem;
   color: var(--hunter-green);
   margin: 0;
@@ -82,7 +80,7 @@
   height: 24px;
   background: var(--fern-green);
   color: white;
-  border-radius: 50%;
+  border-radius: 50%; /* Changed from 50% to 0 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,7 +103,7 @@
   transform: translateX(-50%);
   background: white;
   border: 2px solid var(--sage);
-  border-radius: 15px;
+  border-radius: 0; /* Changed from 15px to 0 */
   padding: 1.5rem;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   width: 300px;
@@ -114,12 +112,15 @@
 }
 
 .helpTooltip h4 {
+  font-family: 'Adora Bella', cursive; /* Added */
+  font-style: italic; /* Added */
   color: var(--hunter-green);
   margin: 0 0 1rem 0;
   font-size: 1.1rem;
 }
 
 .helpTooltip ol {
+  font-family: 'Cormorant Garamond', serif; /* Added */
   margin: 0 0 1rem 0;
   padding-left: 1.2rem;
   color: var(--brunswick-green);
@@ -131,6 +132,7 @@
 }
 
 .helpTooltip p {
+  font-family: 'Cormorant Garamond', serif; /* Added */
   margin: 0;
   font-size: 0.9rem;
   color: var(--brunswick-green);
@@ -154,12 +156,12 @@
 }
 
 .searchInput {
+  font-family: 'Cormorant Garamond', serif; /* Added */
   width: 100%;
   padding: 1.2rem 1.5rem;
   border: 2px solid var(--sage);
-  border-radius: 50px;
+  border-radius: 0; /* Changed from 50px to 0 */
   font-size: 1.1rem;
-  font-family: 'Cormorant Garamond', serif;
   transition: all 0.3s ease;
   background-color: var(--timberwolf);
   position: relative;
@@ -179,7 +181,7 @@
   right: 0;
   background: white;
   border: 1px solid var(--sage);
-  border-radius: 15px;
+  border-radius: 0; /* Changed from 15px to 0 */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   z-index: 20;
   max-height: 200px;
@@ -188,6 +190,7 @@
 }
 
 .searchResult {
+  font-family: 'Cormorant Garamond', serif; /* Added */
   padding: 1rem 1.5rem;
   cursor: pointer;
   border-bottom: 1px solid var(--timberwolf);
@@ -210,6 +213,8 @@
 }
 
 .selectedTitle {
+  font-family: 'Adora Bella', cursive; /* Added */
+  font-style: italic; /* Added */
   font-size: 1.2rem;
   color: var(--brunswick-green);
   margin-bottom: 1rem;
@@ -223,12 +228,13 @@
 }
 
 .guestTag {
+  font-family: 'Cormorant Garamond', serif; /* Added */
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, var(--sage) 0%, var(--fern-green) 100%);
+  background: var(--sage);
   color: white;
   padding: 0.8rem 1.2rem;
-  border-radius: 25px;
+  border-radius: 0; /* Changed from 25px to 0 */
   font-weight: 500;
   gap: 0.5rem;
   box-shadow: 0 4px 15px rgba(88, 129, 87, 0.2);
@@ -246,7 +252,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 0; /* Changed from 50% to 0 */
   transition: background-color 0.2s ease;
 }
 
@@ -271,12 +277,13 @@
 }
 
 .radioLabel {
+  font-family: 'Cormorant Garamond', serif; /* Added */
   display: flex;
   align-items: flex-start;
   cursor: pointer;
   padding: 1.5rem;
   border: 2px solid var(--timberwolf);
-  border-radius: 15px;
+  border-radius: 0; /* Changed from 15px to 0 */
   transition: all 0.3s ease;
   position: relative;
 }
@@ -297,7 +304,7 @@
   width: 22px;
   height: 22px;
   border: 2px solid var(--sage);
-  border-radius: 50%;
+  border-radius: 50%; /* Changed from 50% to 0 */
   margin-right: 1.2rem;
   position: relative;
   transition: all 0.3s ease;
@@ -319,7 +326,7 @@
   width: 10px;
   height: 10px;
   background: white;
-  border-radius: 50%;
+  border-radius: 50%; /* Changed from 50% to 0 */
 }
 
 .radioText {
@@ -329,38 +336,20 @@
 }
 
 .radioText strong {
+  font-family: 'Cormorant Garamond', serif; /* Added */
   font-size: 1.2rem;
   color: var(--hunter-green);
   font-weight: 600;
 }
 
-.radioSubtext {
-  font-size: 1rem;
-  color: var(--brunswick-green);
-  font-style: italic;
-}
-
-/* Important Info */
+/* Important Info - Now just text, no card styling */
 .importantInfo {
-  display: flex;
-  gap: 1rem;
-  background: rgba(163, 177, 138, 0.1);
-  padding: 1.5rem;
-  border-radius: 15px;
-  border-left: 4px solid var(--sage);
+  font-family: 'Cormorant Garamond', serif; /* Added */
   margin-bottom: 2rem;
+  text-align: center;
 }
 
-.infoIcon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
-}
-
-.infoContent {
-  flex: 1;
-}
-
-.infoContent p {
+.importantInfo p {
   margin: 0;
   color: var(--brunswick-green);
   line-height: 1.6;
@@ -373,16 +362,16 @@
 }
 
 .submitButton {
+  font-family: 'Cormorant Garamond', serif; /* Added */
   width: 100%;
   padding: 1.3rem 2rem;
   font-size: 1.3rem;
   background: linear-gradient(135deg, var(--fern-green) 0%, var(--hunter-green) 100%);
   border: none;
-  border-radius: 50px;
+  border-radius: 0; /* Changed from 50px to 0 */
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -409,7 +398,7 @@
   height: 18px;
   border: 2px solid transparent;
   border-top: 2px solid white;
-  border-radius: 50%;
+  border-radius: 0; /* Changed from 50% to 0 */
   animation: spin 1s linear infinite;
 }
 
@@ -420,8 +409,9 @@
 
 /* Messages */
 .message {
+  font-family: 'Cormorant Garamond', serif; /* Added */
   padding: 1.2rem 1.5rem;
-  border-radius: 12px;
+  border-radius: 0; /* Changed from 12px to 0 */
   margin-top: 1.5rem;
   text-align: center;
   font-weight: 500;
@@ -438,38 +428,6 @@
   background-color: rgba(255, 0, 0, 0.1);
   color: #d32f2f;
   border: 1px solid #d32f2f;
-}
-
-/* Additional Info */
-.additionalInfo {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 2px solid var(--timberwolf);
-  text-align: center;
-}
-
-.infoTitle {
-  font-size: 1.3rem;
-  color: var(--hunter-green);
-  margin-bottom: 1rem;
-}
-
-.infoText {
-  color: var(--brunswick-green);
-  line-height: 1.6;
-  font-size: 1.1rem;
-}
-
-.infoLink {
-  color: var(--fern-green);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.infoLink:hover {
-  color: var(--hunter-green);
-  text-decoration: underline;
 }
 
 /* Mobile Responsiveness */
@@ -509,12 +467,6 @@
   .submitButton {
     padding: 1.1rem 1.5rem;
     font-size: 1.2rem;
-  }
-
-  .importantInfo {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.8rem;
   }
 }
 

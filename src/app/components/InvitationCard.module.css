@@ -1,177 +1,97 @@
 /* Invitation Section */
 .invitation {
-    background-color: var(--sage);
-    position: relative;
-  }
-  
+  background-color: var(--sage);
+  position: relative;
+}
+
+.invitationTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  color: var(--brunswick-green);
+  text-align: center;
+}
+
+.invitationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card Side */
+.cardSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+/* Card Image Wrapper - This ensures consistent sizing */
+.cardImageWrapper {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card Images with fixed aspect ratio */
+.cardImage {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 5/7; /* This maintains the 500x700 proportion */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 0; /* Changed from 15px to 0 for square corners */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.cardImage:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the image fills the container without distortion */
+  display: block;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
   .invitationTitle {
-    font-size: 3rem;
-    margin-bottom: 3rem;
-    color: var(--brunswick-green);
-    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
   }
-  
+
   .invitationContainer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Card Side */
-  .cardSide {
-    display: flex;
     flex-direction: column;
+    gap: 2rem;
     align-items: center;
-    gap: 1rem;
-    flex: 1;
   }
-  
-  /* Card Image Wrapper - This ensures consistent sizing */
-  .cardImageWrapper {
+
+  .cardSide {
     width: 100%;
     max-width: 500px;
-    display: flex;
-    justify-content: center;
   }
-  
-  /* Card Images with fixed aspect ratio */
+
   .cardImage {
-    width: 100%;
-    max-width: 500px;
-    aspect-ratio: 5/7; /* This maintains the 500x700 proportion */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+    max-width: 400px;
   }
-  
-  .cardImage:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 480px) {
+  .invitationTitle {
+    font-size: 2.2rem;
   }
-  
-  .image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This ensures the image fills the container without distortion */
-    display: block;
+
+  .cardImage {
+    max-width: 100%;
   }
-  
-  /* Card Label */
-  .cardLabel {
-    text-align: center;
-  }
-  
-  .cardLabel span {
-    background-color: var(--fern-green);
-    color: white;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 1rem;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-  }
-  
-  /* Alternative: Subtle Important Note */
-.importantNote {
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .noteContent {
-    background-color: transparent;
-    padding: 1.5rem 2rem;
-    border-radius: 10px;
-    border: 2px solid var(--fern-green);
-    max-width: 700px;
-    text-align: center;
-  }
-  
-  .noteTitle {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    color: var(--hunter-green);
-    margin-bottom: 1rem;
-    font-weight: 600;
-    font-style: italic;
-  }
-  
-  .noteText {
-    font-size: 1.1rem;
-    color: var(--brunswick-green);
-    line-height: 1.6;
-    margin: 0;
-  }
-  
-  /* Mobile Responsiveness */
-  @media (max-width: 768px) {
-    .invitationTitle {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-    }
-  
-    .invitationContainer {
-      flex-direction: column;
-      gap: 2rem;
-      align-items: center;
-    }
-  
-    .cardSide {
-      width: 100%;
-      max-width: 500px;
-    }
-  
-    .cardImage {
-      max-width: 400px;
-    }
-  
-    .importantNote {
-      margin-top: 2rem;
-    }
-  
-    .noteContent {
-      padding: 1.5rem;
-      margin: 0 1rem;
-    }
-  
-    .noteTitle {
-      font-size: 1.8rem;
-    }
-  
-    .noteText {
-      font-size: 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .invitationTitle {
-      font-size: 2.2rem;
-    }
-  
-    .cardImage {
-      max-width: 100%;
-    }
-  
-    .cardLabel span {
-      font-size: 0.9rem;
-      padding: 6px 16px;
-    }
-  
-    .noteContent {
-      padding: 1.25rem;
-    }
-  
-    .noteTitle {
-      font-size: 1.6rem;
-    }
-  
-    .noteText {
-      font-size: 0.95rem;
-    }
-  }
+}

@@ -195,14 +195,12 @@ export default function RSVP() {
               </div>
             </div>
 
-            {/* Important Info */}
+            {/* Important Info - Now just text, no card */}
             <div className={styles.importantInfo}>
-              <div className={styles.infoContent}>
-                <p>
-                  Please RSVP for all guests listed on your invitation by searching and selecting each name when responding. 
-                  Due to limited space, our wedding is adults-only and by invitation only.
-                </p>
-              </div>
+              <p>
+                Please RSVP for all guests listed on your invitation by searching and selecting each name when responding. 
+                Due to limited space, our wedding is adults-only and by invitation only.
+              </p>
             </div>
 
             {/* Submit Button */}
@@ -233,18 +231,6 @@ export default function RSVP() {
               </div>
             )}
           </form>
-
-          {/* Additional Info */}
-          <div className={styles.additionalInfo}>
-            <h3 className={styles.infoTitle}>Need to make changes?</h3>
-            <p className={styles.infoText}>
-              If you need to update your RSVP or have any questions, 
-              please contact us at{' '}
-              <a href="mailto:jwells14@shaw.ca" className={styles.infoLink}>
-                jwells14@shaw.ca
-              </a>
-            </p>
-          </div>
         </div>
       </div>
     </section>

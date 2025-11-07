@@ -2,10 +2,12 @@
 import Hero from './components/Hero';
 import InvitationCard from './components/InvitationCard';
 import TheDay from './components/TheDay';
-import GettingHere from './components/GettingHere';
-import WhereToStay from './components/WhereToStay';
 import Gifts from './components/Gifts';
 import RSVP from './components/RSVP';
+import IntroDate from './components/IntroDate';
+import CombinedLogistics from './components/CombinedLogistics';
+import FAQ from './components/FAQ';
+
 
 
 export default function Home() {
@@ -15,18 +17,21 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
 
+      <IntroDate />
+
       <InvitationCard />
 
       <TheDay />
 
-      <GettingHere />
-
-      <WhereToStay />
+      <CombinedLogistics />
 
 
       <Gifts />
+
       
       <RSVP />
+
+      <FAQ />
       
     </main>
   )
