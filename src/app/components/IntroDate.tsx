@@ -19,7 +19,7 @@ export default function IntroDate() {
         </div>
         
         <div className={styles.textColumn}>
-          <div className={styles.dateText}>July 25</div>
+          <div className={styles.dateText}>July 25th</div>
           <div className={styles.atText}>at</div>
           <div className={styles.venueText}>AMERICAN CREEK LODGE</div>
         </div>

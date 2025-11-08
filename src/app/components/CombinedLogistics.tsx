@@ -5,7 +5,7 @@ export default function CombinedLogistics() {
   const bannerImages = [
     '/images/hope-1.png',
     '/images/hope-2.png', 
-    '/images/hope-3.png',
+    '/images/hope-10.png',
     '/images/hope-4.jpg',
     '/images/hope-5.png',
     '/images/hope-6.jpg',

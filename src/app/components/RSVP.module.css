@@ -65,7 +65,7 @@
 }
 
 .sectionTitle {
-  font-family: 'Adora Bella', cursive; /* Changed to Adora Bella */
+  font-family: 'Parisienne';
   font-style: italic; /* Added italic */
   font-size: 1.8rem;
   color: var(--hunter-green);
@@ -112,7 +112,7 @@
 }
 
 .helpTooltip h4 {
-  font-family: 'Adora Bella', cursive; /* Added */
+  font-family: 'Parisienne',; /* Added */
   font-style: italic; /* Added */
   color: var(--hunter-green);
   margin: 0 0 1rem 0;
@@ -213,7 +213,7 @@
 }
 
 .selectedTitle {
-  font-family: 'Adora Bella', cursive; /* Added */
+  font-family: 'Parisienne'; /* Added */
   font-style: italic; /* Added */
   font-size: 1.2rem;
   color: var(--brunswick-green);

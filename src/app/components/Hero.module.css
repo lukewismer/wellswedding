@@ -3,7 +3,6 @@
     background-image: url('/images/gifts_background.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -44,7 +43,7 @@
 }
 
 .andSymbol {
-    font-family: 'Adora Bella', cursive;
+    font-family: 'Parisienne';
     font-size: 4rem;
     color: white;
     margin: -0.5rem 0;
@@ -61,6 +60,10 @@
 
 /* Mobile Responsiveness for Hero */
 @media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll; /* Change to scroll on mobile */
+    }
+    
     .name {
         font-size: 3.5rem;
     }

@@ -17,8 +17,8 @@ export default function InvitationCard() {
                 <Image 
                   src="/images/invite-card-front.png"
                   alt="Wedding Invitation Front"
-                  width={500}
-                  height={700}
+                  width={550}
+                  height={770}
                   className={styles.image}
                   priority
                 />
@@ -33,8 +33,8 @@ export default function InvitationCard() {
                 <Image 
                   src="/images/invite-card-back.png"
                   alt="Wedding Invitation Back"
-                  width={500}
-                  height={700}
+                  width={550}
+                  height={770}
                   className={styles.image}
                 />
               </div>

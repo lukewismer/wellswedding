@@ -3,8 +3,9 @@
   background-image: url('/images/venue-background.png');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   position: relative;
+  min-height: 800px; /* Adjust based on your needs */
 }
 
 .backgroundOverlay {
@@ -50,7 +51,7 @@
 }
 
 .mainMessage {
-  font-family: 'Adora Bella', cursive;
+  font-family: 'Parisienne';
   font-style: italic;
   font-size: 1.5rem;
   color: var(--hunter-green);
@@ -59,7 +60,20 @@
 }
 
 /* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .gifts {
+    background-position: center 30%; /* Adjust to show the best part of the image */
+  }
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .gifts {
+    background-size: auto 100%; /* Maintain aspect ratio, fill height */
+    background-position: center;
+    min-height: 300px; /* Adjust for mobile */
+  }
+  
   .title {
     font-size: 2.5rem;
   }
@@ -74,6 +88,10 @@
 }
 
 @media (max-width: 480px) {
+  .gifts {
+    min-height: 250px; /* Even smaller for very small screens */
+  }
+  
   .title {
     font-size: 2.2rem;
   }
@@ -84,16 +102,5 @@
   
   .mainMessage {
     font-size: 1.2rem;
-  }
-}
-
-/* Reduced motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-  .gifts {
-    background-attachment: scroll;
-  }
-  
-  .message {
-    backdrop-filter: none;
   }
 }

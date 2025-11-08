@@ -1,4 +1,3 @@
-// src/app/components/Footer.tsx
 'use client';
 import { useState, useEffect } from 'react';
 import styles from './Footer.module.css';
@@ -67,7 +66,11 @@ export default function Footer() {
       <div className={`container ${styles.footerContainer}`}>
         <div className={styles.footerContent}>
           <div className={styles.footerSection}>
-            <h3 className={styles.footerTitle}>Jeremy & Kara</h3>
+            <h3 className={styles.footerTitle}>
+              <span className={styles.name}>Kara</span>
+              <span className={styles.andSymbol}> and </span>
+              <span className={styles.name}>Jeremy</span>
+            </h3>
             <p className={styles.footerText}>July 25, 2026</p>
             <p className={styles.footerText}>American Creek Lodge</p>
           </div>
@@ -77,6 +80,9 @@ export default function Footer() {
             <div className={styles.contactInfo}>
               <p className={styles.footerText}>
                 <strong>Email:</strong> jwells14@shaw.ca
+              </p>
+              <p className={styles.photoCredit}>
+                Engagement photos taken by @alexapedrozaphoto
               </p>
             </div>
           </div>

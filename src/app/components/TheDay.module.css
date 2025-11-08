@@ -22,9 +22,9 @@
 }
 
 .subheaderText {
-  font-family: 'Adora Bella', cursive;
+  font-family: 'Parisienne';
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--brunswick-green);
   line-height: 1.6;
   margin: 0;
@@ -72,7 +72,7 @@
 }
 
 .eventTitle {
-  font-family: 'Adora Bella', cursive;
+  font-family: 'Parisienne';
   font-style: italic;
   font-size: 1.3rem;
   color: var(--brunswick-green);
@@ -125,6 +125,13 @@
   .eventTitle {
     font-size: 1.2rem;
   }
+
+  .subheader {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+  }
+
 }
 
 @media (max-width: 480px) {

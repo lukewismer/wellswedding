@@ -31,12 +31,12 @@
 }
 
 .countdownTitle {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
   color: white;
-  font-weight: 600;
+  font-weight: 400;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -56,6 +56,7 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  border-radius: 0;
 }
 
 .countdownItem:hover {
@@ -68,7 +69,7 @@
   display: block;
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: white;
   line-height: 1;
   margin-bottom: 0.5rem;
@@ -103,20 +104,37 @@
 }
 
 .footerTitle {
-  font-family: 'Dancing Script', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
   font-size: 2.2rem;
   color: white;
-  margin-bottom: 1rem;
-  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.andSymbol {
+  font-family: 'Parisienne';
+  font-style: italic;
+  font-size: 1.8rem;
+  color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .footerSubtitle {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Parisienne';
+  font-style: italic;
   font-size: 1.3rem;
   color: var(--sage);
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -127,14 +145,26 @@
   margin-bottom: 0.5rem;
   color: var(--timberwolf);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
 }
 
 .footerText strong {
   color: white;
+  font-weight: 600;
 }
 
 .contactInfo {
   text-align: center;
+}
+
+.photoCredit {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: var(--timberwolf);
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .footerLinks {
@@ -150,6 +180,7 @@
   text-decoration: none;
   transition: all 0.3s ease;
   padding: 0.25rem 0;
+  font-weight: 400;
 }
 
 .footerLink:hover {
@@ -169,6 +200,7 @@
   color: var(--sage);
   margin: 0;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
 }
 
 /* Mobile Styles */
@@ -214,12 +246,16 @@
     text-align: center;
   }
 
-  .footerLinks {
-    align-items: center;
+  .footerTitle {
+    gap: 0.25rem;
   }
 
-  .footerTitle {
+  .name {
     font-size: 2rem;
+  }
+
+  .andSymbol {
+    font-size: 1.6rem;
   }
 
   .footerSubtitle {
@@ -228,6 +264,10 @@
 
   .footerText {
     font-size: 1rem;
+  }
+
+  .photoCredit {
+    font-size: 0.95rem;
   }
 }
 
@@ -257,12 +297,20 @@
     padding: 1.5rem 0 1rem;
   }
 
-  .footerTitle {
+  .name {
     font-size: 1.8rem;
+  }
+
+  .andSymbol {
+    font-size: 1.4rem;
   }
 
   .footerSubtitle {
     font-size: 1.1rem;
+  }
+
+  .photoCredit {
+    font-size: 0.9rem;
   }
 }
 
@@ -273,6 +321,10 @@
   }
   
   .countdownItem {
+    transition: none;
+  }
+  
+  .footerLink {
     transition: none;
   }
 }

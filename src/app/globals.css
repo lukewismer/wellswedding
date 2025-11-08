@@ -85,9 +85,6 @@ html {
 
 /* Mobile Responsiveness - Keep only general mobile styles */
 @media (max-width: 768px) {
-  body {
-    padding-top: 70px; /* Slightly less padding on mobile */
-  }
   
   .section {
     min-height: calc(100vh - 70px);
